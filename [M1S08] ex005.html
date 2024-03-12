@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Estilo por Classe</title>
+    <style>
+    
+        .minhaClasse {
+            color: #3498db; 
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <p class="minhaClasse">Elemento 1</p>
+    <p class="minhaClasse">Elemento 2</p>
+    <p class="minhaClasse">Elemento 3</p>
+
+    <script>
+        
+        var elementos = document.querySelectorAll(".minhaClasse");
+
+        elementos.forEach(function(elemento) {
+            elemento.style.color = "#e74c3c"; 
+            elemento.style.fontWeight = "normal"; 
+           
+        });
+    </script>
+
+</body>
+</html>

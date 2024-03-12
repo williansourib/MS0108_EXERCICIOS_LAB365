@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remover Classe</title>
+    <style>
+       
+        .minhaClasse {
+            color: #3498db; 
+            font-weight: bold; 
+        }
+    </style>
+</head>
+<body>
+
+    <p id="meuElemento" class="minhaClasse">Texto do Elemento</p>
+
+    <script>
+        
+        var meuElemento = document.getElementById("meuElemento");
+
+        
+        meuElemento.classList.remove("minhaClasse");
+    </script>
+
+</body>
+</html>

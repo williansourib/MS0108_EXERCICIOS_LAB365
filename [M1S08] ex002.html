@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Texto por Classe</title>
+    <style>
+  
+        .minhaClasse {
+            color: #2ecc71; 
+        }
+    </style>
+</head>
+<body>
+
+    <p class="minhaClasse">Texto do Elemento 1</p>
+    <p class="minhaClasse">Texto do Elemento 2</p>
+    <p class="minhaClasse">Texto do Elemento 3</p>
+
+    <script>
+     
+        var elementos = document.querySelectorAll(".minhaClasse");
+
+        elementos.forEach(function(elemento) {
+            elemento.textContent = "Novo Texto";
+        });
+    </script>
+
+</body>
+</html>

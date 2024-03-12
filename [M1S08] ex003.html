@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Novo Elemento</title>
+</head>
+<body>
+
+    <div id="container">
+      
+    </div>
+
+    <script>
+        
+        var novoParagrafo = document.createElement("p");
+        
+        
+        novoParagrafo.textContent = "Este é um novo parágrafo adicionado dinamicamente.";
+
+        
+        var container = document.getElementById("container");
+
+        
+        container.appendChild(novoParagrafo);
+    </script>
+
+</body>
+</html>

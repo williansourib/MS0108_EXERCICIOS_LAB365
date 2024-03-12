@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <style>
+      
+        #taskList {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .taskItem {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .taskItem input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        .taskItem.completed {
+            text-decoration: line-through;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lista de Tarefas</h1>
+
+    <ul id="taskList"></ul>
+    <input type="text" id="newTask" placeholder="Adicionar nova tarefa">
+    <button onclick="addTask()">Adicionar</button>
+
+    <script>
+        function addTask() {
+           
+            var taskText = document.getElementById("newTask").value.trim();
+
+            
+            if (taskText !== "") {
+                var taskList = document.getElementById("taskList");
+
+                
+                var newTaskItem = document.createElement("li");
+                newTaskItem.className = "taskItem";
+
+               
+                var checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.onclick = toggleTaskCompleted;
+
+                var taskTextSpan = document.createElement("span");
+                taskTextSpan.textContent = taskText;
+
+                newTaskItem.appendChild(checkbox);
+                newTaskItem.appendChild(taskTextSpan);
+
+                taskList.appendChild(newTaskItem);
+
+                document.getElementById("newTask").value = "";
+            }
+        }
+
+        function toggleTaskCompleted() {
+            this.parentNode.classList.toggle("completed");
+        }
+    </script>
+
+</body>
+</html>
